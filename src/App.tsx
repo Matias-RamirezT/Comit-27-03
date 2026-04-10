@@ -35,7 +35,7 @@ function App() {
       <Route path="/Informativa" element= {<Informativa /> } />
       <Route path="/Original" element= {<Original /> } />
       <Route path="/Usuarios" element= {<Usuario /> } />
-      <Route path="/Equipo" element= {<Equipo /> } />
+      <Route path="/Equipo/:equipo" element= {<Equipo /> } />
   
     </Routes>
     </Router>
