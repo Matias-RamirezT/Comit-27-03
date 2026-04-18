@@ -1,47 +1,36 @@
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router";
-import Home from "./Home"
-import Favoritos from "./Favoritos"
-import Informativa from "./Informativa"
-import Original from "./Original"
-import Usuario from "./Usuario"
-import Equipo from "./Equipo"
-import './App.css'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router';
+import Home from './Home/index'
+import Original from './Original/index'
+import Equipo from './Equipo/index'
+import Informativa from './Informativa/index'
+import Usuario from './Usuario/index'
+import Favoritos from './Favoritos/index'
+import "./App.css"
 
 function App() {
+  
 
   return (
     <>
-
-    <Router>
-      <nav className="c-menu">
-      <Link to ={"/Home"}> Home</Link>
-      <Link to ={"/Favoritos"}> Favoritos</Link>
-      <Link to ={"/Informativa"}> Informaiva</Link>
-      <Link to ={"/Original"}> Original</Link>
-      <Link to ={"/Usuario"}> Usuario</Link>
-      <Link to ={"/Equipo"}> Equipo</Link>
-
-
-
-      </nav>
-
-
-
-    
-    <Routes>
-
-      <Route path="/Home" element= {<Home /> } />
-      <Route path="/Favoritos" element= {<Favoritos /> } />
-      <Route path="/Informativa" element= {<Informativa /> } />
-      <Route path="/Original" element= {<Original /> } />
-      <Route path="/Usuarios" element= {<Usuario /> } />
-      <Route path="/Equipo/:equipo" element= {<Equipo /> } />
-  
-    </Routes>
-    </Router>
-     
-    </>
-  )
+<Router>
+<nav className="c-menu">
+<Link to="/favoritos">Favoritos</Link>
+<Link to="/original">Original</Link>
+<Link to="/informativa">Informativa</Link>
+<Link to="/usuario">Usuario</Link>
+<Link to="/">Home</Link>
+</nav>
+<Routes>
+<Route path="/" element={<Home/>}/>
+<Route path="/original" element={<Original/>}/>
+<Route path="/favoritos" element={<Favoritos/>}/>
+<Route path="/informativa" element={<Informativa/>}/>
+<Route path="/usuario" element={<Usuario/>}/>
+<Route path="/equipo/:equipo" element={<Equipo/>}/>
+</Routes>
+</Router>
+</>
+)
 }
 
 export default App
